@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "Fresh Meat",
+        "price": "1600",
+        "description": "Fresh Meat like beef , mutton or chicken is only upto 1600 Yen.",
+        "img": "items/meats/chicken.jpg",
+        "unit": "1kg",
+        "minimum-quantity": "30kg"
+    },
+    {
+        "id": 2,
+        "name": "Fresh Fish",
+        "price": "2500",
+        "description": "Fresh Ilish (Hilsha) from Bangladesh is also Available. also other fishes of river is available ",
+        "img": "items/frozen-food/salmon.jpg",
+        "unit": "2kg",
+        "minimum-quantity": "30kg"
+    },
+    {
+        "id": 3,
+        "name": "Rice",
+        "price": "2100",
+        "description": "Get the Best quality Basmati Rice in Cheapest rate.",
+        "img": "items/riceAndgrains/rice.jpg",
+        "unit": "5kg",
+        "minimum-quantity": "50kg"
+    },
+    {
+        "id": 4,
+        "name": "Lentils",
+        "price": "350",
+        "description": "Best lentils from fine quality grains",
+        "img": "items/riceAndgrains/muung.jpg",
+        "unit": "1kg",
+        "minimum-quantity": "40kg"
+    },
+    {
+        "id": 5,
+        "name": "Nuts",
+        "price": "2000",
+        "description": "Rich in Protein Nuts and dry fruits also available",
+        "img": "items/dryFruits/mixed-nuts.jpg",
+        "unit": "1kg",
+        "minimum-quantity": "10kg"
+    },
+    {
+        "id": 6,
+        "name": "Flour(Moida)",
+        "price": "650",
+        "description": "Best quality Flour produced from homee grown High-quality wheat",
+        "img": "items/riceAndgrains/flour.jpg",
+        "unit": "1kg",
+        "minimum-quantity": "25kg"
+    },
+    {
+        "id": 7,
+        "name": "Chicken Nuggets",
+        "price": "550",
+        "description": "Best quality chicken nuggets produced from Desi Murgi",
+        "img": "items/frozen-food/nuggets.jpg",
+        "unit": "500g",
+        "minimum-quantity": "25kg"
+    }
+]
