@@ -1,0 +1,11 @@
+.carousal-caption {
+    top: 70%;
+    transform: translateY(-50%);
+    padding-bottom: initial;
+    color: black;
+    bottom: 50%;
+    text-align: center;
+    max-width: 500px;
+    left: auto;
+    /*top: auto;*/
+}

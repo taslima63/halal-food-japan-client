@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
 import NotFound from './components/Shared/NotFound/NotFound';
 import Header from './components/Shared/Header/Header';
-import Home from './components/Home/Home';
+import Home from './components/Pages/HomeSection/Home/Home';
 
 
 
