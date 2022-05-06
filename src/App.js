@@ -5,6 +5,8 @@ import NotFound from './components/Shared/NotFound/NotFound';
 import Header from './components/Shared/Header/Header';
 import Home from './components/Pages/HomeSection/Home/Home';
 import Items from './components/Pages/ItemsSection/Items/Items';
+import Login from './components/Pages/LoginSection/Login/Login';
+import Register from './components/Pages/LoginSection/Register/Register';
 
 
 
@@ -18,6 +20,8 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}> </Route>
         <Route path='/items' element={<Items></Items>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>} />
       </Routes>
     </div>
