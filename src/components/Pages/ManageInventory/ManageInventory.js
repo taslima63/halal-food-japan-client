@@ -27,7 +27,7 @@ const ManageInventory = () => {
         }
     }
 
-    const addNewButton = () => {
+    const addNewItems = () => {
         navigate('/addItems');
     }
 
@@ -35,7 +35,7 @@ const ManageInventory = () => {
         <div className='w-50 mx-auto'>
             <h2>Manage your services</h2>
 
-            <button onClick={addNewButton} className='bookBtn text-dark'>Add New Items</button>
+            <button onClick={addNewItems} className='bookBtn text-dark'>Add New Items</button>
 
             <Table striped bordered hover size="sm" className='my-5'>
                 <thead>
