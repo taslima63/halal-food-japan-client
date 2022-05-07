@@ -17,6 +17,8 @@ To Manage Inventory like deleting any items or add new Items user Must logged in
 * Firebase Authentication
 * Firebase Hooks
 * React Bootstrap
+* Node js
+* Express Js
 * Mongo Db CRUD operation
 
 ***Function of Authentication***
