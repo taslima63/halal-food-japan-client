@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../../../firebase.init';
 import ThirdPartyLogin from '../ThirdPartyLogin/ThirdPartyLogin';
 
@@ -9,8 +10,10 @@ const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
-    let errorElement;
+    const location = useLocation();
 
+    let errorElement;
+    let from = location.state?.from?.pathname || "/";
     const [
         signInWithEmailAndPassword,
         user,
@@ -18,6 +21,10 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    //  return to the page from where login page invoked
+    if (user) {
+        navigate(from, { replace: true });
+    }
     // error message show
     if (error) {
         errorElement = <div>
@@ -25,6 +32,18 @@ const Login = () => {
         </div>
     }
     const [sendPasswordResetEmail, sending, passError] = useSendPasswordResetEmail(auth);
+
+    // password reset
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Email has been sent to reset passwword');
+        } else {
+            toast('Please enter your email address');
+        }
+    }
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -60,12 +79,13 @@ const Login = () => {
                 </Form>
 
 
-                <p>Forget Password?<button style={{ color: '#c5d912', outline: 'none', backgroundColor: '#fff', border: 'none' }} className=' pe-auto text-decoration-none' >Reset Password</button> </p>
+                <p>Forget Password?<button style={{ color: '#c5d912', outline: 'none', backgroundColor: '#fff', border: 'none' }} className=' pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
 
                 <p>New to Halal Food Japan? <Link to="/register" style={{ color: '#c5d912' }} className='pe-auto text-decoration-none' > Register Here</Link> </p>
             </div>
             <ThirdPartyLogin></ThirdPartyLogin>
-        </div>
+
+        </div >
     );
 };
 

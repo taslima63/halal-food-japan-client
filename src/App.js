@@ -7,6 +7,7 @@ import Home from './components/Pages/HomeSection/Home/Home';
 import Items from './components/Pages/ItemsSection/Items/Items';
 import Login from './components/Pages/LoginSection/Login/Login';
 import Register from './components/Pages/LoginSection/Register/Register';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>} />
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
