@@ -13,6 +13,7 @@ import ItemDetails from './components/Pages/ItemsSection/ItemDetails/ItemDetails
 import AddItems from './components/Pages/AddItems/AddItems';
 import 'react-toastify/dist/ReactToastify.css';
 import ManageInventory from './components/Pages/ManageInventory/ManageInventory';
+import RequiredAuth from './components/Pages/LoginSection/RequiredAuth/RequiredAuth';
 
 
 
@@ -27,14 +28,21 @@ function App() {
         <Route path='/home' element={<Home></Home>}> </Route>
         <Route path='/items' element={<Items></Items>}></Route>
         <Route path='/item/:itemId' element={<ItemDetails />}></Route>
-        <Route path='/updateItem' element={<UpdateItem></UpdateItem>}></Route>
+        <Route path='/updateItem' element={
+          <RequiredAuth>
+            <UpdateItem></UpdateItem>
+          </RequiredAuth>
+        }
+        ></Route>
         <Route path="/addItems" element={
-          <AddItems></AddItems>
+          <RequiredAuth>
+            <AddItems></AddItems>
+          </RequiredAuth>
         }></Route>
         <Route path="/manageInventory" element={
-
-          <ManageInventory></ManageInventory>
-
+          <RequiredAuth>
+            <ManageInventory></ManageInventory>
+          </RequiredAuth>
         }></Route>
 
         <Route path='/login' element={<Login></Login>}></Route>

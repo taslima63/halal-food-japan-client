@@ -3,11 +3,13 @@ import { Col, Container, Row, Table } from 'react-bootstrap';
 import useItems from '../../../hooks/useItems';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const ManageInventory = () => {
     const [items, setItems] = useItems();
+    const navigate = useNavigate();
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
@@ -25,13 +27,17 @@ const ManageInventory = () => {
         }
     }
 
+    const addNewButton = () => {
+        navigate('/addItems');
+    }
+
     return (
         <div className='w-50 mx-auto'>
             <h2>Manage your services</h2>
 
+            <button onClick={addNewButton} className='bookBtn text-dark'>Add New Items</button>
 
-
-            <Table striped bordered hover size="sm">
+            <Table striped bordered hover size="sm" className='my-5'>
                 <thead>
                     <tr>
                         <th>Item Name</th>
