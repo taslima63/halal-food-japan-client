@@ -19,15 +19,15 @@ const Banner = () => {
                     <img
                         className="d-block w-100 "
                         src={banner1}
-                        alt="Second slide"
+                        alt="First slide"
                     />
                 </div>
-                <Carousel.Caption>
+                {/* <Carousel.Caption>
                     <div className="carousal-caption mt-2">
                         <h3 style={{ color: '#606060FF' }}>Here Starts Your Positivity</h3>
                         <p className='text-dark ' style={{ fontWeight: '500', fontFamily: "'Roboto',sans-serif" }}>Underneath all I design lies the solid belief that beauty is a positive force.</p>
                     </div>
-                </Carousel.Caption>
+                </Carousel.Caption> */}
             </Carousel.Item>
             <Carousel.Item>
                 <div className='caro-img'>
@@ -38,47 +38,47 @@ const Banner = () => {
                     />
 
                 </div>
-                <Carousel.Caption>
+                {/* <Carousel.Caption>
                     <div className="carousal-caption">
                         <h3 style={{ color: '#606060FF' }}>A Room Is Not A Room Without Natural Light.</h3>
                         <p className='text-dark ' style={{ fontWeight: '500', fontFamily: "'Roboto',sans-serif" }}>A house is much more than a mere shelter—it should lift us emotionally and spiritually.</p>
                     </div>
-                </Carousel.Caption>
+                </Carousel.Caption> */}
             </Carousel.Item>
             <Carousel.Item>
                 <div className='caro-img'>
                     <img
                         className="d-block w-100"
                         src={banner3}
-                        alt="Second slide"
+                        alt="third slide"
                     />
 
                 </div>
 
-                <Carousel.Caption>
+                {/* <Carousel.Caption>
                     <div className="carousal-caption">
                         <h3 style={{ color: '#606060FF' }}>Never Seen Elegance Go Out of Style.</h3>
                         <p className='text-dark' style={{ fontWeight: '500', fontFamily: "'Roboto',sans-serif" }}>
                             For a house to be successful, the objects in it must communicate with one another, respond and balance one another.
                         </p>
                     </div>
-                </Carousel.Caption>
+                </Carousel.Caption> */}
             </Carousel.Item>
             <Carousel.Item>
                 <div className='caro-img'>
                     <img
                         className="d-block w-100"
                         src={banner4}
-                        alt="Second slide"
+                        alt="fourth slide"
                     />
 
                 </div>
 
                 <Carousel.Caption>
                     <div className="carousal-caption">
-                        <h3 style={{ color: '#606060FF' }}>Design Is Thinking Made Visual.</h3>
+                        {/* <h3 style={{ color: '#606060FF' }}h3> */}
                         <p className='text-dark' style={{ fontWeight: '500', fontFamily: "'Roboto',sans-serif" }}>
-                            There are three responses to a piece of design – yes, no, and WOW! Wow is the one to aim for.
+
                         </p>
                     </div>
                 </Carousel.Caption>

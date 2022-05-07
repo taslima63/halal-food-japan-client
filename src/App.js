@@ -8,6 +8,11 @@ import Items from './components/Pages/ItemsSection/Items/Items';
 import Login from './components/Pages/LoginSection/Login/Login';
 import Register from './components/Pages/LoginSection/Register/Register';
 import { ToastContainer } from 'react-toastify';
+import UpdateItem from './components/Pages/HomeSection/UpdateItem/UpdateItem';
+import ItemDetails from './components/Pages/ItemsSection/ItemDetails/ItemDetails';
+import AddItems from './components/Pages/AddItems/AddItems';
+import 'react-toastify/dist/ReactToastify.css';
+import ManageInventory from './components/Pages/ManageInventory/ManageInventory';
 
 
 
@@ -21,6 +26,17 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}> </Route>
         <Route path='/items' element={<Items></Items>}></Route>
+        <Route path='/item/:itemId' element={<ItemDetails />}></Route>
+        <Route path='/updateItem' element={<UpdateItem></UpdateItem>}></Route>
+        <Route path="/addItems" element={
+          <AddItems></AddItems>
+        }></Route>
+        <Route path="/manageInventory" element={
+
+          <ManageInventory></ManageInventory>
+
+        }></Route>
+
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>} />

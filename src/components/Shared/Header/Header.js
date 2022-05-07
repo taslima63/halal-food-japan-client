@@ -4,7 +4,7 @@ import { Container, Nav, Navbar, NavLink } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import logo from './../../../images/japan70.png';
+import logo from './../../../images/halal3-80.png';
 
 const Header = () => {
     const [user] = useAuthState(auth);
@@ -15,7 +15,7 @@ const Header = () => {
 
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="light" variant="light" sticky='top'>
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky='top'>
                 <Container>
                     <Navbar.Brand as={Link} to="/"><img src={logo} alt='' /> Halal Food Japan</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -24,6 +24,9 @@ const Header = () => {
                         <Nav>
                             <Nav.Link as={Link} to='/home' >Home</Nav.Link>
                             <NavLink as={Link} to='/items'>Items</NavLink>
+                            <Nav.Link as={Link} to="addItems">Add New Items</Nav.Link>
+                            <Nav.Link as={Link} to="manageInventory">Manage</Nav.Link>
+
                             {user ? <button className='btn btn-link text-decoration-none' onClick={handleSignOut}>Sign Out</button>
                                 : <Nav.Link eventKey={2} href="/login">
                                     Login
