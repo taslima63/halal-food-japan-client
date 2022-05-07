@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "question": "js vs node",
+        "answer": "JavaScript is a programming language for writing scripts.This language only runs in browser.Mostly used in Frontend Developmetn. whereas Nodejs is a javascript runtime environment. mostly runs on the server side. It doesnot have any capabilities to add HTML tags.",
+        "img": "https://i.ibb.co/7QWrrbS/js-vs-node.jpg",
+        "author": "Taslima Akter",
+        "date": "2022/05/08"
+    },
+    {
+        "id": 2,
+        "question": "When to use Node and Mongodb?",
+        "answer": "'node.js is especially suited for applications that require persistent connection from the browser back to the server. - such as chat programs, or interactive games' If one is just building an application that does not necessarily need user/server communication, developing with other frameworks would be just fine and will take much less time. MongoDB is more suited in scenarios that call for reading/writing a lot of data, without much emphasis on transaction safety (if some data occasionally gets lost in a server crash, it's not a big deal), expect to scale big, and don't really have a stable schema.",
+        "img": "https://i.ibb.co/ZmrCbFM/node-mongodb.png",
+        "author": "Taslima Akter",
+        "date": "2022/04/18"
+    },
+    {
+        "id": 3,
+        "question": "SQL vs Mongodb",
+        "answer": "SQL is structured query language used in Relational Database. In SQL each individual records are stored as 'row'. A Table is used to store Row's (records of similar type). In contrary Mongodb is a NoSQL database. Each individual records are stored as 'documents' Documemts belonging to a particular group stored as Collection",
+        "img": "https://i.ibb.co/sWptCVJ/mongo-Vssql.png",
+        "author": "Taslima Akter",
+        "date": "2021/12/31"
+    }
+]

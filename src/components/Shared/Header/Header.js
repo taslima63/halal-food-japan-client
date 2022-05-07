@@ -22,8 +22,9 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
 
                         <Nav>
-                            <Nav.Link as={Link} to='/home' >Home</Nav.Link>
+                            <Nav.Link as={Link} to='home' >Home</Nav.Link>
                             <Nav.Link as={Link} to="manageInventory">Manage Inventory</Nav.Link>
+                            <Nav.Link as={Link} to="blogs">Blogs</Nav.Link>
 
                             {user ? <button className='btn btn-link text-decoration-none' onClick={handleSignOut}>SignOut</button>
                                 : <Nav.Link eventKey={2} href="/login">

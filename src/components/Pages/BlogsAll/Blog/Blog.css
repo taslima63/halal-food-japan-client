@@ -1,0 +1,55 @@
+.blog-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Bebas Neue', cursive;
+    color: darkgreen;
+}
+
+.rainbowhead {
+    display: block;
+    margin: auto;
+    background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.question {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.answer {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    color: #606060;
+
+}
+
+
+
+.blog-banner img {
+    width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+
+    .blog-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+}
