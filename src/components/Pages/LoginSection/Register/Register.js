@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../../firebase.init';
 import ThirdPartyLogin from '../ThirdPartyLogin/ThirdPartyLogin';
+import Loading from '../../../Shared/Loading/Loading';
 
 const Register = () => {
     const [errMsg, setErrMsg] = useState("");
@@ -18,6 +19,11 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const [updateProfile, nameUpdating] = useUpdateProfile(auth);
+
+
+    if (loading || nameUpdating) {
+        return <Loading></Loading>
+    }
 
     const navigateLogin = () => {
         navigate('/login');

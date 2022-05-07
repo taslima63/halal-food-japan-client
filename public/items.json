@@ -7,7 +7,9 @@
         "img": "https://i.ibb.co/LJL1gVP/meat-fish.jpg",
         "quantity": "456",
         "supplier": "Bengal Meat Gourmet Bucther",
-        "origin": "Australia, Brazil"
+        "origin": "Australia, Brazil",
+        "sold": "1154",
+        "email": "ruba.taslima63@gmail.com"
     },
     {
         "id": 2,
@@ -17,7 +19,9 @@
         "img": "https://i.ibb.co/4Jss40d/vegetables.jpg",
         "quantity": "234",
         "supplier": "Shawpno",
-        "origin": "Bangladesh"
+        "origin": "Bangladesh",
+        "sold": "920",
+        "email": "ruba.taslima63@gmail.com"
     },
     {
         "id": 3,
@@ -27,7 +31,9 @@
         "img": "https://i.ibb.co/t47kZV3/rice.jpg",
         "quantity": "5234",
         "supplier": "ChalDal.com",
-        "origin": "Bangladesh"
+        "origin": "Bangladesh",
+        "sold": "7820",
+        "email": "ruba.taslima63@gmail.com"
     },
     {
         "id": 4,
@@ -37,7 +43,9 @@
         "img": "https://i.ibb.co/WGxpzGT/Beans.jpg",
         "quantity": "1324",
         "supplier": "ChalDal.com",
-        "origin": "Bangladesh"
+        "origin": "Bangladesh",
+        "sold": "6720",
+        "email": "ruba6315.tr@gmail.com"
     },
     {
         "id": 5,
@@ -47,7 +55,9 @@
         "img": "https://i.ibb.co/yVzMD5T/OIL.jpg",
         "quantity": "578",
         "supplier": "Bashundhara group",
-        "origin": "Bangladesh"
+        "origin": "Bangladesh",
+        "sold": "820",
+        "email": "ruba6315.tr@gmail.com"
     },
     {
         "id": 6,
@@ -57,7 +67,9 @@
         "img": "https://i.ibb.co/zsKZQWJ/spices.png",
         "quantity": "456",
         "supplier": "Radhuni",
-        "origin": "Bangladesh, India"
+        "origin": "Bangladesh, India",
+        "sold": "320",
+        "email": "ruba6315.tr@gmail.com"
     },
     {
         "id": 7,
@@ -67,6 +79,8 @@
         "img": "https://i.ibb.co/WP3Xjp7/roah.jpg",
         "quantity": "789",
         "supplier": "Pran, Bombay Sweets",
-        "origin": "Malaysia, Indonesia"
+        "origin": "Malaysia, Indonesia",
+        "sold": "120",
+        "email": "ruba.taslima63@gmail.com"
     }
 ]

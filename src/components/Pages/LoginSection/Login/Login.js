@@ -4,6 +4,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../../firebase.init';
+import Loading from '../../../Shared/Loading/Loading';
 import ThirdPartyLogin from '../ThirdPartyLogin/ThirdPartyLogin';
 
 const Login = () => {
@@ -32,6 +33,15 @@ const Login = () => {
         </div>
     }
     const [sendPasswordResetEmail, sending, passError] = useSendPasswordResetEmail(auth);
+
+    //  return to the page from where login page invoked
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
+    if (loading) {
+        return <Loading></Loading>
+    }
 
     // password reset
     const resetPassword = async () => {
