@@ -110,6 +110,9 @@ const ItemDetails = () => {
                                             </small>
                                         </Card.Text>
                                         <Card.Text style={{ fontSize: "16px", margin: '0px 2px' }}>
+                                            <small className='pe-2 text-start'> Total Sold Item : {item.sold}</small>
+                                        </Card.Text>
+                                        <Card.Text style={{ fontSize: "16px", margin: '0px 2px' }}>
                                             {item.description}
                                         </Card.Text>
                                         <button className='bookBtn text-dark' onClick={handleDelivered}>Shipped</button>

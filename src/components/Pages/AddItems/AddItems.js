@@ -29,10 +29,12 @@ const AddItems = () => {
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <input className='mb-2' placeholder='Item Name' {...register("name", { required: true })} />
                 <textarea className='mb-2' placeholder='Description' {...register("description")} />
-                <input className='mb-2' placeholder='Seller Name' {...register("supplier", { required: true })} />
+                <input className='mb-2' placeholder='Supplierr Name' {...register("supplier", { required: true })} />
+                <input className='mb-2' placeholder='Email Address' {...register("email", { required: true })} />
                 <input className='mb-2' placeholder='Product Origin' {...register("origin")} />
                 <input className='mb-2' placeholder='Price' type="number" {...register("price", { required: true })} />
                 <input className='mb-2' placeholder='Quantity' type="number" {...register("quantity")} />
+                <input className='mb-2' placeholder='Sold item' type="number" {...register("sold")} />
                 <input className='mb-2' placeholder='Photo URL' type="text" {...register("img", { required: true })} />
                 <input type="submit" value="Add New Item" />
             </form>
