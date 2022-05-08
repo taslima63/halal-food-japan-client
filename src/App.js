@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import ManageInventory from './components/Pages/ManageInventory/ManageInventory';
 import RequiredAuth from './components/Pages/LoginSection/RequiredAuth/RequiredAuth';
 import Blogs from './components/Pages/BlogsAll/Blogs/Blogs';
+import MyItems from './components/Pages/MyItems/MyItems';
 
 
 
@@ -44,7 +45,14 @@ function App() {
           </RequiredAuth>
         }></Route>
         <Route path="/manageInventory" element={
-          <ManageInventory></ManageInventory>
+          <RequiredAuth>
+            <ManageInventory></ManageInventory>
+          </RequiredAuth>
+        }></Route>
+        <Route path="/myItems" element={
+          <RequiredAuth>
+            <MyItems></MyItems>
+          </RequiredAuth>
         }></Route>
 
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Row, Table } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 import useItems from '../../../hooks/useItems';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
@@ -57,29 +57,6 @@ const ManageInventory = () => {
                 </tbody>
 
             </Table >
-
-            {/* <Container className='mx-auto'>
-            
-
-                        <Row gap={2}>
-                            <Col xs={12} md={6} >
-                                <div className=''> {item.name}</div>
-                            </Col>
-                            <Col xs={6} md={4}>
-                                {item.supplier}
-                            </Col>
-                            <Col xs={6} md={2}>
-                               
-                            </Col>
-                        </Row>
-                    </Container> */}
-
-            {/* <tr>
-                                    <td>{item.name}</td>
-                                    <td>{item.supplier}</td>
-                                    <td>{item.quantity}</td>
-                                    <td> <button onClick={() => handleDelete(item._id)}><FontAwesomeIcon icon="fa-solid fa-trash-can" /></button></td>
-                                </tr> */}
 
 
         </div >

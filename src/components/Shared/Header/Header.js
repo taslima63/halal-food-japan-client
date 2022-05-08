@@ -23,11 +23,17 @@ const Header = () => {
 
                         <Nav>
                             <Nav.Link as={Link} to='home' >Home</Nav.Link>
-                            <Nav.Link as={Link} to="manageInventory">Manage Inventory</Nav.Link>
-                            <Nav.Link as={Link} to="blogs">Blogs</Nav.Link>
 
-                            {user ? <button className='btn btn-link text-decoration-none' onClick={handleSignOut}>SignOut</button>
-                                : <Nav.Link eventKey={2} href="/login">
+                            <Nav.Link as={Link} to="blogs">Blogs</Nav.Link>
+                            {
+                                user && <>
+                                    <Nav.Link as={Link} to="manageInventory">Manage Inventory</Nav.Link>
+                                    <Nav.Link as={Link} to="myItems">My Items</Nav.Link>
+                                    <Nav.Link as={Link} to="addItems">Add New Items</Nav.Link>
+                                </>
+                            }
+                            {user ? <button className='btn btn-link text-decoration-none' onClick={handleSignOut}>Logout</button>
+                                : <Nav.Link eventKey={2} as={Link} to="login">
                                     Login
                                 </Nav.Link>}
                         </Nav>
