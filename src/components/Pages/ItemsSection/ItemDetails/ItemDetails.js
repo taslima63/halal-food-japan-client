@@ -11,7 +11,7 @@ const ItemDetails = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/item/${itemId}`;
+        const url = `https://limitless-anchorage-22968.herokuapp.com/item/${itemId}`;
 
         fetch(url)
             .then(res => res.json())
@@ -29,7 +29,7 @@ const ItemDetails = () => {
 
         const updatedQuantity = parseInt(item.quantity) - 1;
         setQuantity(updatedQuantity);
-        const url = `http://localhost:5000/item/${itemId}`;
+        const url = `https://limitless-anchorage-22968.herokuapp.com/item/${itemId}`;
 
         fetch(url, {
             method: 'PUT',
@@ -52,7 +52,7 @@ const ItemDetails = () => {
         } else {
             const updatedQuantity = parseInt(item.quantity) + parseInt(restockQuantity);
             setQuantity(updatedQuantity);
-            const url = `http://localhost:5000/item/${itemId}`;
+            const url = `https://limitless-anchorage-22968.herokuapp.com/item/${itemId}`;
 
             fetch(url, {
                 method: 'PUT',

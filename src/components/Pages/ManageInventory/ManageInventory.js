@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
 import useItems from '../../../hooks/useItems';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
@@ -14,7 +14,7 @@ const ManageInventory = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://limitless-anchorage-22968.herokuapp.com/item/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -32,12 +32,12 @@ const ManageInventory = () => {
     }
 
     return (
-        <div className='w-50 mx-auto'>
-            <h2>Manage your services</h2>
+        <Container className='w-80 mx-auto'>
+            <h2 className='text-center my-4'>Manage your services</h2>
 
             <button onClick={addNewItems} className='bookBtn text-dark'>Add New Items</button>
 
-            <Table striped bordered hover size="sm" className='my-5'>
+            <Table striped bordered hover size="sm" className='my-5' responsive>
                 <thead>
                     <tr>
                         <th>Item Name</th>
@@ -59,7 +59,7 @@ const ManageInventory = () => {
             </Table >
 
 
-        </div >
+        </Container >
     );
 };
 

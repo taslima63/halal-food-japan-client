@@ -7,14 +7,14 @@ const Items = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/item')
+        fetch('https://limitless-anchorage-22968.herokuapp.com/item')
             .then(res => res.json())
             .then(data => setItems(data))
     }, []);
     return (
-        <div className='container my-5' id='items'>
+        <div className='container my-5 mx-auto' id='items'>
             <div className="row">
-                <h2 style={{ fontFamily: "'Roboto', sans-serif", fontWeight: '600', color: '#606060FF' }} > This is Our Avilable Items</h2>
+                <h2 style={{ fontFamily: "'Roboto', sans-serif", fontWeight: '600', color: '#606060FF' }} className="text-center"> This is Our Avilable Items</h2>
 
                 <div className='row'>
                     {
@@ -25,8 +25,8 @@ const Items = () => {
                     }
                 </div>
             </div>
-            <div className='my-5'>
-                <Link to='/manageInventory' style={{ 'textDecoration': 'none', 'background': 'radial-gradient(circle at 10% 20%, rgb(87, 108, 117) 0%, rgb(37, 50, 55) 100.2%)' }} className='bookBtn text-dark px-3 text-white'>Go To Manage Inventory</Link>
+            <div className='my-5 mx-auto ' style={{ 'width': '280px' }}>
+                <Link to='/manageInventory' style={{ 'textDecoration': 'none', 'background': 'radial-gradient(circle at 10% 20%, rgb(87, 108, 117) 0%, rgb(37, 50, 55) 100.2%)' }} className='bookBtn text-dark px-3 text-white '>Go To Manage Inventory</Link>
             </div>
         </div >
     );

@@ -17,7 +17,7 @@ const Dashboard = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/item')
+        fetch('https://limitless-anchorage-22968.herokuapp.com/item')
             .then(res => res.json())
             .then(data => setItems(data))
     }, []);
@@ -50,7 +50,7 @@ const Dashboard = () => {
 
     return (
         <div>
-            <h1 style={{ fontFamily: "'Roboto', sans-serif", fontWeight: '600', color: '#606060FF' }} > DashBoard</h1>
+            <h1 style={{ fontFamily: "'Roboto', sans-serif", fontWeight: '600', color: '#606060FF' }} className="text-center"> DashBoard</h1>
             {Object.keys(dashBoard).map((key) => (
                 <Container>
                     <Row className='justify-content-center align-items-center my-5'>

@@ -13,7 +13,7 @@ const Blogs = () => {
     }, []);
     return (
         <div className='container mt-5'>
-            <h2 className='my-5' style={{ color: '#606060FF' }}>All The Blogs</h2>
+            <h2 className='my-5 text-center' style={{ color: '#606060FF' }}>All The Blogs</h2>
             <div className="blogs-container">
 
                 <div className='blogs'>

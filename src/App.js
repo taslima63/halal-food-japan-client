@@ -16,6 +16,7 @@ import ManageInventory from './components/Pages/ManageInventory/ManageInventory'
 import RequiredAuth from './components/Pages/LoginSection/RequiredAuth/RequiredAuth';
 import Blogs from './components/Pages/BlogsAll/Blogs/Blogs';
 import MyItems from './components/Pages/MyItems/MyItems';
+import Footer from './components/Shared/Footer/Footer';
 
 
 
@@ -23,7 +24,7 @@ import MyItems from './components/Pages/MyItems/MyItems';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
@@ -60,6 +61,7 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>} />
       </Routes >
+      <Footer></Footer>
       <ToastContainer />
     </div >
   );

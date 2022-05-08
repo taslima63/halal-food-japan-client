@@ -56,7 +56,7 @@ const Register = () => {
     return (
         <div>
             <div className='register-form'>
-                <h2 style={{ textAlign: 'center', color: "#dcf715", margin: '20px 0px' }}>Please Register</h2>
+                <h2 style={{ textAlign: 'center', color: "#dcf715", margin: '20px 0px' }} className="text-center">Please Register</h2>
                 <Form onSubmit={handleRegister} className='w-50 mx-auto my-3'>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
 

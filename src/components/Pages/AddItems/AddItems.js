@@ -6,7 +6,7 @@ const AddItems = () => {
 
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/item`;
+        const url = `https://limitless-anchorage-22968.herokuapp.com/item`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -25,7 +25,7 @@ const AddItems = () => {
 
     return (
         <div className='w-50 mx-auto'>
-            <h2>Please add a Item</h2>
+            <h2 className="text-center my-5">Please add a Item</h2>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <input className='mb-2' placeholder='Item Name' {...register("name", { required: true })} />
                 <textarea className='mb-2' placeholder='Description' {...register("description")} />
@@ -36,7 +36,7 @@ const AddItems = () => {
                 <input className='mb-2' placeholder='Quantity' type="number" {...register("quantity")} />
                 <input className='mb-2' placeholder='Sold item' type="number" {...register("sold")} />
                 <input className='mb-2' placeholder='Photo URL' type="text" {...register("img", { required: true })} />
-                <input type="submit" value="Add New Item" />
+                <input className='bookBtn' type="submit" value="Add New Item" />
             </form>
         </div>
     );

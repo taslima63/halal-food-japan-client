@@ -71,7 +71,7 @@ const Login = () => {
     return (
         <div className='container'>
             <div className='w-50 mx-auto'>
-                <h2 style={{ textAlign: 'center', color: "#dcf715", margin: '20px 0px' }}>Please Login</h2>
+                <h2 style={{ textAlign: 'center', color: "#dcf715", margin: '20px 0px' }} className="text-center">Please Login</h2>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
 
