@@ -83,7 +83,7 @@ const Register = () => {
                     <button className='bookBtn text-dark'>Register</button>
                 </Form>
                 <p className='text-danger my-3'>{error || errMsg}</p>
-                <p>Already have an account? <Link to="/login" style={{ color: '#c5d912' }} className='pe-auto text-decoration-none' onClick={navigateLogin}>Login</Link> </p>
+                <p className='text-center'>Already have an account? <Link to="/login" style={{ color: '#c5d912' }} className='pe-auto text-decoration-none' onClick={navigateLogin}>Login</Link> </p>
             </div>
             <ThirdPartyLogin></ThirdPartyLogin>
         </div>
