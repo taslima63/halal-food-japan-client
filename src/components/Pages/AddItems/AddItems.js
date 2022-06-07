@@ -5,7 +5,6 @@ const AddItems = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
-        console.log(data);
         const url = `https://limitless-anchorage-22968.herokuapp.com/item`;
         fetch(url, {
             method: 'POST',
@@ -16,7 +15,6 @@ const AddItems = () => {
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result);
                 toast('data added successfully!!');
 
             })

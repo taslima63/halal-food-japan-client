@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import google from '../../../../images/google.svg';
 import auth from '../../../../firebase.init';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -7,7 +7,9 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 const ThirdPartyLogin = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
+    const location = useLocation();
     const navigate = useNavigate();
+    let from = location.state?.from?.pathname || "/";
     let errorElement;
 
     if (googleError) {
@@ -17,7 +19,7 @@ const ThirdPartyLogin = () => {
     }
 
     if (googleUser) {
-        navigate('/home')
+        navigate(from, { replace: true });
     }
 
     return (

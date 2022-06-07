@@ -30,7 +30,8 @@ const Dashboard = () => {
             availableItemsCount += parseInt(item.quantity);
             supplierList.push(item.supplier);
             categoryList.push(item.name);
-
+            console.log(totalSalesCount, "totalSalesCount");
+            console.log("salesAmountCount", salesAmountCount);
             dashBoard.suppliers = getUniqueArray(supplierList);
             dashBoard.category = getUniqueArray(categoryList);
             dashBoard.totalSales = totalSalesCount;

@@ -26,20 +26,22 @@ const Login = () => {
     if (user) {
         navigate(from, { replace: true });
     }
+
+
+    const [sendPasswordResetEmail, sending, passError] = useSendPasswordResetEmail(auth);
     // error message show
     if (error) {
         errorElement = <div>
-            <p className='text-danger'>Error: {error?.message} </p>
+            <p className='text-danger'>Error: {error?.message || passError?.message} </p>
         </div>
     }
-    const [sendPasswordResetEmail, sending, passError] = useSendPasswordResetEmail(auth);
 
     //  return to the page from where login page invoked
     if (user) {
         navigate(from, { replace: true });
     }
 
-    if (loading) {
+    if (loading || sending) {
         return <Loading></Loading>
     }
 
@@ -64,10 +66,6 @@ const Login = () => {
 
     }
 
-    const navigateRegister = event => {
-        navigate('/register');
-    }
-
     return (
         <div className='container'>
             <div className='w-50 mx-auto'>
@@ -85,7 +83,11 @@ const Login = () => {
                     </Form.Group>
 
                     <button type="submit" className='bookBtn text-dark' >Login</button>
-
+                    <div className='my-2'>
+                        {
+                            errorElement
+                        }
+                    </div>
                 </Form>
 
 

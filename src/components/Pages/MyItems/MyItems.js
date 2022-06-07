@@ -14,7 +14,7 @@ const MyItems = () => {
     const email = user.email;
 
     useEffect(() => {
-        console.log('email', email);
+
         fetch(`https://limitless-anchorage-22968.herokuapp.com/myItem?email=${email}`)
             .then(res => res.json())
             .then(data => setItems(data))
@@ -30,7 +30,6 @@ const MyItems = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     const remaining = items.filter(item => item._id !== id);
                     setItems(remaining);
                 })

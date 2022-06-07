@@ -11,14 +11,13 @@ const RequiredAuth = ({ children }) => {
     const [sendEmailVerification, sending, error] = useSendEmailVerification(auth);
 
     if (loading) {
-
         return <Loading></Loading>;
     }
 
     if (!user) {
         return <Navigate to="/login" state={{ from: location }} replace />
     }
-    console.log(user);
+
     if (user.providerData[0]?.providerId === 'password' && !user.emailVerified) {
         return (
             <div>
