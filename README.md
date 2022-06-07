@@ -3,7 +3,7 @@ Halal Food Japan
 
 ## Live Website ##
 
-[Netlify Link]()
+[Live Site](https://halal-food-japan.web.app/)
 
 ## Project Description ##
 
